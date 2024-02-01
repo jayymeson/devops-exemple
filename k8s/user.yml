@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ci-cd-example-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ci-cd-exemple
+  template:
+    metadata:
+      name: ci-cd-example
+      labels:
+        app: ci-cd-example
+    spec:
+      containers:
+        - name: ci-cd-example
+          image: jayymeson/ci-cd-example-dev:1.1
+          ports:
+            - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ci-cd-example
+spec:
+  type: ClusterIP
+  selector:
+    app: ci-cd-example
+  ports:
+    - name: http
+      protocol: TCP
+      port: 3000
+      targetPort: 3000

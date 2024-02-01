@@ -1,0 +1,11 @@
+Rodar app no kubernet
+ 1 Criar a imagem
+ 2 fazer push da imagem
+ 3 Configurar a arquivo deployment
+ 4 Configurar a arquivo service (onde vai poder acessar o container)
+
+docker ps - exibe todos os containers em execução
+
+Generate Images
+  docker build -t jayymeson/ci-cd-exemple-dev:1.1 . (1.1 versão estável)
+  docker push jayymeson/ci-cd-exemple-dev:1.1
