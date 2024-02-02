@@ -3,14 +3,14 @@ name: USER-CI-CD
 on:
   push:
     paths:
-      - 'user/src/**'
-
+      - 'Dockerfile'
+      - 'src/**'
+      - 'k8s/**'
   workflow_dispatch:
 
 jobs:
   CI-CD-EXAMPLE-CI:
     runs-on: ubuntu-22.04
-
     steps:
       - uses: actions/checkout@v3
 
