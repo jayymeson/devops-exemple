@@ -6,7 +6,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ci-cd-exemple
+      app: ci-cd-example
   template:
     metadata:
       name: ci-cd-example

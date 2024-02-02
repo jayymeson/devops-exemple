@@ -6,6 +6,7 @@ import { User as UserModel } from '@prisma/client';
 export class UserService {
   constructor(private prisma: PrismaService) {}
 
+  // teste ci/cd
   async createUser(data: UserModel): Promise<UserModel> {
     return this.prisma.user.create({
       data,

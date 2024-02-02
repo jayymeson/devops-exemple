@@ -7,5 +7,7 @@ Rodar app no kubernet
 docker ps - exibe todos os containers em execução
 
 Generate Images
-  docker build -t jayymeson/ci-cd-exemple-dev:1.1 . (1.1 versão estável)
-  docker push jayymeson/ci-cd-exemple-dev:1.1
+  docker build -t jayymeson/ci-cd-example-dev:1.1 . (1.1 versão estável)
+  docker push jayymeson/ci-cd-example-dev:1.1
+
+kubectl apply -f user.yml
