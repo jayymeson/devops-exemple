@@ -1,13 +1,13 @@
-Rodar app no kubernet
- 1 Criar a imagem
- 2 fazer push da imagem
- 3 Configurar a arquivo deployment
- 4 Configurar a arquivo service (onde vai poder acessar o container)
+Run application without kubernet
+ 1 Create an image
+ 2 push the image
+ 3 Configure a file deployment
+ 4 Configure a service file (where you will be able to access the container)
 
-docker ps - exibe todos os containers em execução
+docker ps - displays all running containers
 
 Generate Images
-  docker build -t jayymeson/ci-cd-example-dev:1.1 . (1.1 versão estável)
+  docker build -t jayymeson/ci-cd-example-dev:1.1 . (1.1 stable version)
   docker push jayymeson/ci-cd-example-dev:1.1
 
 kubectl apply -f user.yml
